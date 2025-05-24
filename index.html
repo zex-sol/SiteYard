@@ -385,6 +385,7 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
             perspective: 1000px;
+            justify-items: center;
         }
 
         .service-card {
@@ -399,6 +400,8 @@
             opacity: 0;
             transform: translateY(50px) rotateX(10deg);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
 
         .service-card.visible {
@@ -443,7 +446,7 @@
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.1) rotateY(360deg);
+            transform: scale(1.1);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
@@ -460,12 +463,12 @@
             font-size: 1.05rem;
         }
 
-        /* Portfolio with 3D Effects */
+        /* Portfolio with Clean Effects */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 3rem;
-            perspective: 1000px;
+            justify-items: center;
         }
 
         .portfolio-item {
@@ -475,18 +478,20 @@
             overflow: hidden;
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
-            transform: translateY(50px) rotateX(10deg);
+            transform: translateY(50px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 420px;
+            width: 100%;
         }
 
         .portfolio-item.visible {
             opacity: 1;
-            transform: translateY(0) rotateX(0deg);
+            transform: translateY(0);
         }
 
         .portfolio-item:hover {
-            transform: translateY(-20px) rotateX(-10deg) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
         }
 
         .portfolio-image {
@@ -826,18 +831,7 @@
             }
         }
 
-        /* Custom Cursor Effect */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease;
-            mix-blend-mode: difference;
-        }
+
 
         /* Fade-in Animation Classes */
         .fade-in {
@@ -909,9 +903,6 @@
         <div class="loading-spinner"></div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -952,17 +943,31 @@
         <h2 class="fade-in">Our Services</h2>
         <div class="services-grid">
             <div class="service-card slide-in-left">
-                <div class="service-icon">🎨</div>
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h12v2H3v-2zm0 4h18v2H3v-2z"/>
+                        <circle cx="17" cy="15" r="2"/>
+                    </svg>
+                </div>
                 <h3>Custom Website Design</h3>
                 <p>Beautiful, unique websites tailored to your brand and business goals. We create designs that stand out and convert visitors into customers with cutting-edge aesthetics.</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">📱</div>
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 1h10c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2zm0 2v18h10V3H7zm2 2h6v2H9V5zm0 4h6v2H9V9zm0 4h4v2H9v-2z"/>
+                    </svg>
+                </div>
                 <h3>Mobile Optimization</h3>
                 <p>Ensure your website looks perfect on all devices. Our responsive designs provide seamless experiences across phones, tablets, and desktops with lightning-fast performance.</p>
             </div>
             <div class="service-card slide-in-right">
-                <div class="service-icon">🔍</div>
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        <path d="M12 10h-2v3H9v-3H7V9h2V7h1v2h2v1z"/>
+                    </svg>
+                </div>
                 <h3>Local SEO Basics</h3>
                 <p>Help local customers find your business online. We optimize your website for search engines to increase visibility in your area and drive more qualified leads.</p>
             </div>
@@ -1049,37 +1054,6 @@
                 }, 500);
             }, 1500);
         });
-
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            const dx = mouseX - cursorX;
-            const dy = mouseY - cursorY;
-            
-            cursorX += dx * 0.1;
-            cursorY += dy * 0.1;
-            
-            cursor.style.left = cursorX - 10 + 'px';
-            cursor.style.top = cursorY - 10 + 'px';
-            
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        // Hide cursor on mobile
-        if (window.innerWidth <= 768) {
-            cursor.style.display = 'none';
-        }
 
         // Scroll Progress Bar
         window.addEventListener('scroll', () => {
@@ -1238,13 +1212,11 @@
         // Add hover effects to interactive elements
         document.querySelectorAll('.cta-button, .submit-button, .social-links a').forEach(element => {
             element.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(2)';
-                cursor.style.background = 'rgba(255, 255, 255, 0.5)';
+                element.style.transform = 'scale(1.05)';
             });
             
             element.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.background = 'rgba(255, 255, 255, 0.8)';
+                element.style.transform = 'scale(1)';
             });
         });
 
