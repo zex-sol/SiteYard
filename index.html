@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteYard - Clean Websites. Real Results.</title>
+    <title>SiteYard - Where Great Design Meets Real Results.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,6 +17,11 @@
             line-height: 1.6;
             color: #333;
             background: #fff;
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
         }
 
         /* Header Styles */
@@ -38,6 +43,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
 
         .logo {
@@ -140,6 +146,8 @@
             margin: 0 auto;
             padding-left: 2rem;
             padding-right: 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .section h2 {
@@ -260,14 +268,15 @@
         /* About Section */
         .about {
             background: #f8f8f8;
-            margin: 0 -2rem;
-            padding: 5rem 2rem;
+            padding: 5rem 0;
+            width: 100%;
         }
 
         .about-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            padding: 0 2rem;
         }
 
         .about-content p {
@@ -345,6 +354,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .social-links {
@@ -419,8 +430,11 @@
             }
 
             .about {
-                margin: 0 -1rem;
-                padding: 3rem 1rem;
+                padding: 3rem 0;
+            }
+
+            .about-content {
+                padding: 0 1rem;
             }
         }
 
@@ -462,7 +476,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Clean Websites. Real Results.</h1>
+            <h1>Where Great Design Meets Real Results.</h1>
             <p>Affordable web design for local businesses.</p>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
