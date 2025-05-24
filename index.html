@@ -46,10 +46,10 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
-            25% { transform: translateY(-20px) rotate(90deg); opacity: 0.8; }
-            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.2; }
-            75% { transform: translateY(-20px) rotate(270deg); opacity: 0.6; }
+            0%, 100% { transform: translateY(0px); opacity: 0.2; }
+            25% { transform: translateY(-20px); opacity: 0.8; }
+            50% { transform: translateY(-40px); opacity: 0.2; }
+            75% { transform: translateY(-20px); opacity: 0.6; }
         }
 
         /* Morphing Background */
@@ -407,11 +407,12 @@
 
         /* Services Grid */
         .services-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            justify-content: center;
-            align-items: stretch;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .service-card {
@@ -426,7 +427,7 @@
             opacity: 0;
             transform: translateY(50px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            flex: 0 1 350px;
+            width: 100%;
             max-width: 380px;
         }
 
@@ -658,9 +659,9 @@
             }
 
             .services-grid {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
             }
 
             .section {
@@ -1083,12 +1084,12 @@
             typeWriter();
         }, 2500);
 
-        // Add floating animation to hero highlights
-        const highlights = document.querySelectorAll('.highlight-item');
-        highlights.forEach((highlight, index) => {
-            highlight.style.animationDelay = `${index * 0.5}s`;
-            highlight.style.animation = 'float 3s ease-in-out infinite';
-        });
+        // Add floating animation to hero highlights - DISABLED
+        // const highlights = document.querySelectorAll('.highlight-item');
+        // highlights.forEach((highlight, index) => {
+        //     highlight.style.animationDelay = `${index * 0.5}s`;
+        //     highlight.style.animation = 'float 3s ease-in-out infinite';
+        // });
 
         // Enhanced service card interactions
         document.querySelectorAll('.service-card').forEach(card => {
