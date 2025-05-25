@@ -22,15 +22,18 @@
         /* Section Styles */
         .section {
             padding: 8rem 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
             width: 100%;
             box-sizing: border-box;
             position: relative;
             background: #fff;
             color: #333;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
 
         .section h2 {
@@ -667,134 +670,137 @@
 
     <!-- Services Section -->
     <section id="services" class="section services-section">
-        <h2 class="fade-in visible">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card slide-in-left visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h12v2H3v-2zm0 4h18v2H3v-2z"/>
-                        <circle cx="17" cy="15" r="2"/>
-                    </svg>
+        <div class="section-container">
+            <h2 class="fade-in visible">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card slide-in-left visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h12v2H3v-2zm0 4h18v2H3v-2z"/>
+                            <circle cx="17" cy="15" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Full Website Design</h3>
+                    <p>Custom design tailored to your brand and optimized for desktop and mobile. Built from scratch to match your unique business needs.</p>
+                    <ul class="service-features">
+                        <li>Custom design & branding</li>
+                        <li>Mobile-responsive layout</li>
+                        <li>Content management system</li>
+                        <li>SEO optimization</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                    <div class="service-price">Starting at $500</div>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-button">Get Started</a>
+                    </div>
                 </div>
-                <h3>Full Website Design</h3>
-                <p>Custom design tailored to your brand and optimized for desktop and mobile. Built from scratch to match your unique business needs.</p>
-                <ul class="service-features">
-                    <li>Custom design & branding</li>
-                    <li>Mobile-responsive layout</li>
-                    <li>Content management system</li>
-                    <li>SEO optimization</li>
-                    <li>Performance optimization</li>
-                </ul>
-                <div class="service-price">Starting at $2,500</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Get Started</a>
-                </div>
-            </div>
 
-            <div class="service-card fade-in visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Website Redesign</h3>
+                    <p>Transform your old website into a modern, effective platform that converts visitors into customers with improved performance.</p>
+                    <ul class="service-features">
+                        <li>Modern design update</li>
+                        <li>Improved user experience</li>
+                        <li>Speed optimization</li>
+                        <li>Mobile optimization</li>
+                        <li>Content migration</li>
+                    </ul>
+                    <div class="service-price">Starting at $250</div>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-button">Learn More</a>
+                    </div>
                 </div>
-                <h3>Website Redesign</h3>
-                <p>Transform your old website into a modern, effective platform that converts visitors into customers with improved performance.</p>
-                <ul class="service-features">
-                    <li>Modern design update</li>
-                    <li>Improved user experience</li>
-                    <li>Speed optimization</li>
-                    <li>Mobile optimization</li>
-                    <li>Content migration</li>
-                </ul>
-                <div class="service-price">Starting at $1,800</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Learn More</a>
-                </div>
-            </div>
 
-            <div class="service-card slide-in-right visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                    </svg>
+                <div class="service-card slide-in-right visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Conversion-focused single pages perfect for ads, campaigns, or specific products. Designed to turn visitors into leads.</p>
+                    <ul class="service-features">
+                        <li>High-conversion design</li>
+                        <li>A/B testing ready</li>
+                        <li>Lead capture forms</li>
+                        <li>Analytics integration</li>
+                        <li>Fast loading speed</li>
+                    </ul>
+                    <div class="service-price">Starting at $100</div>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-button">Start Project</a>
+                    </div>
                 </div>
-                <h3>Landing Pages</h3>
-                <p>Conversion-focused single pages perfect for ads, campaigns, or specific products. Designed to turn visitors into leads.</p>
-                <ul class="service-features">
-                    <li>High-conversion design</li>
-                    <li>A/B testing ready</li>
-                    <li>Lead capture forms</li>
-                    <li>Analytics integration</li>
-                    <li>Fast loading speed</li>
-                </ul>
-                <div class="service-price">Starting at $800</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Start Project</a>
-                </div>
-            </div>
 
-            <div class="service-card slide-in-left visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                        <path d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                    </svg>
+                <div class="service-card slide-in-left visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            <path d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                        </svg>
+                    </div>
+                    <h3>Site Maintenance</h3>
+                    <p>Monthly updates, speed improvements, security monitoring, and technical support to keep your website running smoothly.</p>
+                    <ul class="service-features">
+                        <li>Regular security updates</li>
+                        <li>Performance monitoring</li>
+                        <li>Content updates</li>
+                        <li>Backup management</li>
+                        <li>Technical support</li>
+                    </ul>
+                    <div class="service-price">$50/month</div>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-button">Subscribe</a>
+                    </div>
                 </div>
-                <h3>Site Maintenance</h3>
-                <p>Monthly updates, speed improvements, security monitoring, and technical support to keep your website running smoothly.</p>
-                <ul class="service-features">
-                    <li>Regular security updates</li>
-                    <li>Performance monitoring</li>
-                    <li>Content updates</li>
-                    <li>Backup management</li>
-                    <li>Technical support</li>
-                </ul>
-                <div class="service-price">$150/month</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Subscribe</a>
-                </div>
-            </div>
 
-            <div class="service-card fade-in visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                        <path d="M12 10h-2v3H9v-3H7V9h2V7h1v2h2v1z"/>
-                    </svg>
+                <div class="service-card fade-in visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            <path d="M12 10h-2v3H9v-3H7V9h2V7h1v2h2v1z"/>
+                        </svg>
+                    </div>
+                    <h3>SEO Starter Pack</h3>
+                    <p>Google Business setup, local SEO optimization, and social media integration to help customers find you online.</p>
+                    <ul class="service-features">
+                        <li>Google Business Profile</li>
+                        <li>Local SEO optimization</li>
+                        <li>Social media setup</li>
+                        <li>Analytics configuration</li>
+                        <li>Keyword research</li>
+                    </ul>
+                    <div class="service-price">$100 add-on</div>
+                    <div class="service-cta">
+                        <a href="#contact" class="service-button">Add to Project</a>
+                    </div>
                 </div>
-                <h3>SEO Starter Pack</h3>
-                <p>Google Business setup, local SEO optimization, and social media integration to help customers find you online.</p>
-                <ul class="service-features">
-                    <li>Google Business Profile</li>
-                    <li>Local SEO optimization</li>
-                    <li>Social media setup</li>
-                    <li>Analytics configuration</li>
-                    <li>Keyword research</li>
-                </ul>
-                <div class="service-price">$500 add-on</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Add to Project</a>
-                </div>
-            </div>
 
-            <div class="service-card slide-in-right visible">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
-                </div>
-                <h3>E-commerce Solutions</h3>
-                <p>Complete online store setup with inventory management, payment processing, and customer account features for your business.</p>
-                <ul class="service-features">
-                    <li>Custom online store</li>
-                    <li>Payment integration</li>
-                    <li>Inventory management</li>
-                    <li>Customer accounts</li>
-                    <li>Order management</li>
-                </ul>
-                <div class="service-price">Starting at $3,500</div>
-                <div class="service-cta">
-                    <a href="#contact" class="service-button">Discuss Project</a>
+                <div class="service-card slide-in-right visible">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+<h3>Booking Website Solutions</h3>
+<p>Professional booking website setup with scheduling tools, calendar sync, automated reminders, and customer portal for easy management.</p>
+<ul class="service-features">
+    <li>Custom booking system</li>
+    <li>Calendar and availability management</li>
+    <li>Automated email & SMS reminders</li>
+    <li>Customer portal with account access</li>
+    <li>Integrated payments for appointments</li>
+</ul>
+<div class="service-price">Starting at $1,000</div>
+<div class="service-cta">
+    <a href="#contact" class="service-button">Start Your Booking Site</a>
+</div>#contact" class="service-button">Discuss Project</a>
+                    </div>
                 </div>
             </div>
         </div>
