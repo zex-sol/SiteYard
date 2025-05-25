@@ -420,7 +420,7 @@
                 <p>Tell us about your project and we'll provide you with a detailed quote within 24 hours. No commitment required.</p>
             </div>
 
-            <form class="quote-form" id="quoteForm">
+            <form class="quote-form" id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
@@ -609,32 +609,7 @@
 
         // Form submission
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {};
-            
-            // Convert FormData to object
-            for (let [key, value] of formData.entries()) {
-                if (data[key]) {
-                    // Handle multiple values (like checkboxes)
-                    if (Array.isArray(data[key])) {
-                        data[key].push(value);
-                    } else {
-                        data[key] = [data[key], value];
-                    }
-                } else {
-                    data[key] = value;
-                }
-            }
-            
-            // Handle services checkboxes
-            const services = [];
-            document.querySelectorAll('input[name="services"]:checked').forEach(checkbox => {
-                services.push(checkbox.value);
-            });
-            data.services = services;
+            // Remove e.preventDefault() to allow form submission to Formspree
             
             // Simple validation
             const requiredFields = ['firstName', 'lastName', 'email', 'projectType', 'description'];
@@ -651,28 +626,18 @@
             });
             
             if (!isValid) {
+                e.preventDefault(); // Only prevent if validation fails
                 alert('Please fill in all required fields.');
                 return;
             }
             
-            // Simulate form submission
+            // Show loading state
             const submitButton = document.querySelector('.submit-button');
             const originalText = submitButton.textContent;
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            // Simulate API call delay
-            setTimeout(() => {
-                alert('Thank you! Your quote request has been submitted. We\'ll get back to you within 24 hours.');
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                
-                // Reset form
-                this.reset();
-                
-                // Optional: redirect to homepage
-                // window.location.href = 'index.html';
-            }, 2000);
+            // Note: Form will submit to Formspree, user will be redirected to thank you page
         });
 
         // Form field animations
